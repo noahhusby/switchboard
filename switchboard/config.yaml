@@ -1,0 +1,23 @@
+name: switchboard
+version: 1.0.0
+slug: switchboard
+description: Inspects Grandstream ATAs syslog for incoming call events.
+startup: application
+boot: auto
+host_network: true
+ingress: false
+init: false
+homeassistant_api: true
+hassio_role: homeassistant
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  514/udp: 514
+schema:
+  webhook_name: str
+options:
+  webhook_name: incoming_call
